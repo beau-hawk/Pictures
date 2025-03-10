@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Chapter 5</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="ch05-proj3.css" />
+</head>
+<body>
+<header>
+     <h1>Share Your Travels</h1>
+     <p>Let us know where you've been</p>
+</header>
+<main>
+   <section>
+      <form action="process.php" method="POST">
+         <fieldset>
+            <legend>Photo Details</legend>
+           
+            <!-- Title Section-->
+            <label for="title">Title of Your Photo:</label>
+            <input type="text" id="title" name="title" required>
+
+            <!-- Description Section -->
+            <label for="description">Description of Your Photo:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+           
+           <TopSectionCombine>
+           <SecondSection>
+            <!-- Continent Section -->
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent" required>
+                <option value="0">Select Continent</option>
+                <option value="1">Africa</option>
+                <option value="2">Asia</option>
+                <option value="3">Europe</option>
+                <option value="4">North America</option>
+                <option value="5">South America</option>
+                <option value="6">Australia</option>
+                <option value="7">Antarctica</option>
+            </select>
+
+            <!-- Country Section -->
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="0">Select Country</option>
+                <option value="1">United States</option>
+                <option value="2">Canada</option>
+                <option value="3">Mexico</option>
+                <option value="4">China</option>
+                <option value="5">Japan</option>
+            </select>
+
+            <!-- City Section -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+         
+           </SecondSection>
+           <ThirdSection>
+             <!-- Copyright section -->
+                <label for="copyright">Copyright:</label>
+                <div>
+                    <label><input type="radio" name="copyright" value="all-rights" required> All rights reserved</label>
+                    <label><input type="radio" name="copyright" value="creative-commons"> Creative Commons</label>
+                </div>
+
+                <!-- Creative Commons Section -->
+                <label>Creative Commons Types:</label>
+                <div>
+                    <label><input type="checkbox" name="cc-type" value="attribution"> Attribution</label>
+                    <label><input type="checkbox" name="cc-type" value="noncommercial"> Noncommercial</label>
+                    <label><input type="checkbox" name="cc-type" value="noderivatives"> No Derivative Works</label>
+             </ThirdSection>
+             </TopSectionCombine>
+             
+          
+            <!-- Software License Section -->
+            <label for="license">
+              <break>
+               <input type="checkbox" id="license" name="license" required>
+               I accept the software license agreement
+              </break>
+            </label>
+            
+            <BottomSectionCombine>
+            <FourthSection>
+            <!-- Rating Section -->
+            <label for="rating">Rate this photo:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+                        <!-- Color Picker Section -->
+            <label for="color">Select Color:</label>
+            <input type="color" id="color" name="color">
+            </FourthSection>
+            <FifthSection>
+            <!-- Date Section -->
+            <label for="date">Date of Your Photo:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Time Section -->
+            <label for="time">Time of Your Photo:</label>
+            <input type="time" id="time" name="time" required>
+              </FifthSection>
+
+            </BottomSectionCombine>
+
+           
+            <break>
+            <!-- Submit  -->
+            <button type="submit">Submit</button>
+            <!-- Clear (Reset) Section -->
+            <button type="reset">Clear Form</button>
+           </break>
+         </fieldset>
+           
+      </form>       
+   </section>
+
+</main>  
+</body>
+</html>
